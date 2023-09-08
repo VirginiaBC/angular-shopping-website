@@ -1,0 +1,47 @@
+.order-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.my-order-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.order-item {
+  margin: 20px 0;
+  list-style: none;
+}
+
+.order-box {
+  border: 1px solid #ccc; /* 边框样式，可以根据需要调整颜色和宽度 */
+  padding: 10px; /* 内边距，可以根据需要调整 */
+}
+
+.order-id {
+  font-size: 20px;
+}
+
+/* 为产品项添加样式 */
+.product-item {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* 为产品价格添加样式 */
+.product-price {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* 为产品状态添加样式 */
+.product-status {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* 可以根据需要继续添加其他样式 */

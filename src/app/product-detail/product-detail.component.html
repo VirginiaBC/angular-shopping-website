@@ -1,0 +1,19 @@
+<div class="back-arrow" (click)="goBackToProductList()">&#8592; Back</div>
+<div class="product-detail">
+  <div class="product-image">
+    <img [src]="product.image" alt="Product Image" />
+  </div>
+  <div class="product-info">
+    <div class="product-info-details">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description }}</p>
+      <p>Category: {{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+      <p>
+        Rating: {{ product.rating.rate }} &#9733; ({{ product.rating.count }}
+        reviews)
+      </p>
+      <button (click)="addToBag()">Add to Bag</button>
+    </div>
+  </div>
+</div>

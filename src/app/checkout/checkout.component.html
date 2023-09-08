@@ -1,0 +1,46 @@
+<div class="back-arrow" (click)="goBackToCart()">&#8592; Back</div>
+<div class="checkout-container">
+  <ng-container *ngIf="isOrdered; else checkoutSummary">
+    <h3>
+      Yay! 🚀 Order placed successfully.
+      <a (click)="navigateToShop()">Shop more!</a>
+    </h3>
+  </ng-container>
+
+  <ng-template #checkoutSummary>
+    <div>
+      <div class="custom-row">
+        <h4>Order Review</h4>
+        <span>{{ cart.length }} items in cart</span>
+      </div>
+      <div class="custom-row">
+        <h4>Coupons</h4>
+        <span>Not Available</span>
+      </div>
+      <div class="custom-row">
+        <h4>Checkout Summary</h4>
+        <div class="checkout-summary">
+          <span>Subtotal</span>
+          <span>${{ subTotal }}</span>
+        </div>
+        <div class="checkout-summary">
+          <span>Discount</span>
+          <span>{{ discount }}%</span>
+        </div>
+        <div class="checkout-summary">
+          <span>Deliver Fee</span>
+          <span>${{ extraFees }}</span>
+        </div>
+        <div class="checkout-summary">
+          <span>Tax</span>
+          <span>${{ tax }}</span>
+        </div>
+      </div>
+      <div class="custom-row">
+        <h4>Total</h4>
+        <span>${{ total }}</span>
+      </div>
+    </div>
+    <button class="item-btn" (click)="handlePay()">Pay ${{ total }}</button>
+  </ng-template>
+</div>

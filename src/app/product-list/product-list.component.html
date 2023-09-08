@@ -1,0 +1,15 @@
+<div class="product-list">
+  <div
+    class="product-item"
+    *ngFor="let product of productList"
+    (click)="navigateToProductDetails(product.id)"
+  >
+    <img [src]="product.image" alt="product Picture" />
+
+    <div class="item-title">{{ product.title }}</div>
+    <div class="item-info">
+      <div class="item-price">${{ product.price }}</div>
+      <div class="item-rate">{{ product.rating.rate }} &#9733;</div>
+    </div>
+  </div>
+</div>

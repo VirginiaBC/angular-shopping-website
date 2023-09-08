@@ -1,0 +1,22 @@
+<div class="my-order-container">
+  <h2 class="order-title">My Orders</h2>
+  <ul>
+    <li *ngFor="let cart of userCarts" class="order-item">
+      <div class="order-box">
+        <h3 class="order-id">Order ID: {{ cart.id }}</h3>
+        <ul class="product-item-container">
+          <li *ngFor="let order of productDetails" class="product-item">
+            <label class="product-price">{{ order.title }} </label>
+            ${{ order.price }}
+            <p class="product-status" *ngIf="order.isDelivered">
+              Status: Delivered
+            </p>
+            <p class="product-status" *ngIf="!order.isDelivered">
+              Status: In Progress
+            </p>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
