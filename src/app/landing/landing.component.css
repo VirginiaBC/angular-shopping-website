@@ -26,8 +26,12 @@ p {
   line-height: 1.5;
 }
 ul {
-  list-style: disc;
+  list-style: none;
   padding-left: 20px;
+}
+
+li {
+  padding: 6px;
 }
 
 a {
