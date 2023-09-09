@@ -1,5 +1,12 @@
-<app-top-bar></app-top-bar>
-
-<div class="container">
-  <router-outlet></router-outlet>
+<div>
+  <app-landing
+    *ngIf="showLandingPage"
+    (buttonClick)="toggleView()"
+  ></app-landing>
+  <div *ngIf="!showLandingPage">
+    <app-top-bar></app-top-bar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

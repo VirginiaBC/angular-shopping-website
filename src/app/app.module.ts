@@ -16,6 +16,7 @@ import { CartNotEmptyGuard } from './checkout/cart-not-empty.guard';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './login/auth.guard';
 import { OrderComponent } from './order/order.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { OrderComponent } from './order/order.component';
     CheckoutComponent,
     LoginComponent,
     OrderComponent,
+    LandingComponent,
   ],
   bootstrap: [AppComponent],
   providers: [CartService, AuthGuard, CartNotEmptyGuard],
